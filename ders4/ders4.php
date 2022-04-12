@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Diziler</title>
 </head>
 <body>
 < h3 > Php'de Diziler </ h3 >
@@ -26,12 +26,13 @@
     print_r($dizi1);
     echo "</pre>";
 
-    echo "Dizinin 1. elemanı: " . $dizi1[1] . "<br>";
+    echo "<pre>";
+    print_r($dizi2);
+    echo "</pre>";
+
+   
+    echo "Dizinin 5. elemanı: " . $dizi1[5] . "<br>";
     echo "Dizinin 1. elemanın Türü: " . gettype($dizi1[1]) . "<br>";
-
-
-    echo "Dizinin 5. elemanı: " . $dizi1[4] . "<br>";
-    echo "Dizinin 5. elemanın Türü: " . gettype($dizi1[4]) . "<br>";
 
 
     echo "Dizinin 0. İndisi: <b> $dizi1[0]</b><br>";
@@ -88,8 +89,32 @@
     echo "Sayılar2 Dizisinin İçerisindeki Birinci Dizinin Üçüncü Elemanı: " . $sayilar2["Double"][2] . "<br>";
 
 
+    $bilgiler = array(
+        "id"        => 1,
+        "adi"       => "Ahmet",
+        "soyadi"    => "Erimez",
+        "gsm"       => "5343333333",
+        "cinsiyet"  => "Erkek",
+        "yas"       => 30
+    );
+
+
     echo "$bilgiler[adi] $bilgiler[soyadi] Hoşgeldiniz.<br>";
     echo  $bilgiler["adi"] . " " . $bilgiler["soyadi"] . " Hoşgeldiniz.";
+
+    echo "<pre>";
+    print_r($bilgiler);
+    echo "</pre>";
+
+    foreach ($bilgiler as $bilgi) {
+        echo $bilgi . " - ";
+    }
+    echo "<br><br><br><br>";
+    $bilgi = str_split($bilgiler["gsm"],3);
+    foreach ($bilgi as $value) {
+        echo $value . " ";
+    }
+
 
     $kullanici1=array(
     $bilgiler=array(
@@ -100,6 +125,23 @@
         "yas"   => "19"
         )
     );
+    $kullanici2=array(
+    "kullanici2"   => array(
+        "id"     => "1",
+        "adi"    => "Ahmet",
+        "soyadi" => "Keskin",
+        "gsm"    => "555 666 55 44",
+        "yas"    => "32"
+    )
+ );
+   
+
+    echo "<pre>";
+    print_r($kullanicilar);
+    echo "</pre>";
+
+    
+
  $isimler=array();
  $isimler[0]="Dijle";
  $isimler[0]="Gülcan";
@@ -114,15 +156,6 @@
  $isimler=array();
  
 
-
-
-
-
-
-
-
-   
-   
    ?>
 <hr>
 <h3>Koşul İfadeleri (If-Elsse)</h3>
