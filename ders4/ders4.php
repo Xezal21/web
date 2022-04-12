@@ -188,17 +188,6 @@
 <li>elseif sürekli tekrar eden soru bloğı açar.    </li>
 <li> else son kapanış koşuludur. ( herhangi bir şart belirtilmez. hiçbir önkoşul gerçekleşmediğnde çalışıcak son koşulu ifade eder.)   </li>
 
-<?php
-/*  if */
 
-
-
-?>
-
-
-
-
-
-<br> <br> <br>
 </body>
 </html>
